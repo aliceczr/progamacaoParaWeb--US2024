@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Dados</h1>
+    <p id="nome"></p>
+    <p id="endereco"></p>
+    <p id="telefone"></p>
+    <p id="data"></p>
+  </div>
+
+  <script>
+    // Obtenha os dados do localStorage ou de outra fonte de dados
+    const nome = localStorage.getItem('nome');
+    const endereco = localStorage.getItem('endereco');
+    const telefone = localStorage.getItem('telefone');
+    const data = localStorage.getItem('data');
+
+    // Preencha os elementos HTML com os dados
+    document.getElementById('nome').textContent = `Nome: ${nome}`;
+    document.getElementById('endereco').textContent = `Endereço: ${endereco}`;
+    document.getElementById('telefone').textContent = `Telefone: ${telefone}`;
+    document.getElementById('data').textContent = `Data de Agendamento: ${data}`;
+  </script>
+</body>
+</html>
